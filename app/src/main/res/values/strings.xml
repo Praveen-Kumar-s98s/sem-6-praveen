@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Sentinel X</string>
+    <string name="accessibility_service_description">Sentinel X monitors behavioral patterns to protect you from Digital Arrest scams and intention hijacking.</string>
+</resources>
