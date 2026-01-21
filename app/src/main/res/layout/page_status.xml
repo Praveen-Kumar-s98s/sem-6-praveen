@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Page 2: Main Status Ring -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/oled_black"
+    android:id="@+id/statusRoot">
+
+    <!-- Identity Header -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="60dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SENTINEL X"
+            android:textColor="@color/text_primary"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="0.2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Digital Scam Protection"
+            android:textColor="@color/text_muted"
+            android:textSize="11sp"
+            android:letterSpacing="0.1"
+            android:layout_marginTop="4dp" />
+
+    </LinearLayout>
+
+    <!-- Central Status Ring (THE MAGIC) -->
+    <FrameLayout
+        android:id="@+id/ringContainer"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Outer Glow Ring -->
+        <View
+            android:id="@+id/outerGlow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ring_glow"
+            android:alpha="0.3" />
+
+        <!-- Main Ring -->
+        <View
+            android:id="@+id/mainRing"
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:layout_gravity="center"
+            android:background="@drawable/status_ring" />
+
+        <!-- Status Text Inside Ring -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/statusLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PROTECTION"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp"
+                android:letterSpacing="0.3" />
+
+            <TextView
+                android:id="@+id/statusValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OFF"
+                android:textColor="@color/ring_off"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-light"
+                android:layout_marginTop="4dp" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <!-- Live System Indicator -->
+    <LinearLayout
+        android:id="@+id/liveIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/ringContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp">
+
+        <View
+            android:id="@+id/pulsingDot"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:background="@drawable/pulsing_dot" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  Monitoring behavior • On-device • Private"
+            android:textColor="@color/text_muted"
+            android:textSize="11sp"
+            android:letterSpacing="0.05" />
+
+    </LinearLayout>
+
+    <!-- Trust Strip -->
+    <TextView
+        android:id="@+id/trustStrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No messages read • No calls recorded • No cloud"
+        android:textColor="@color/text_muted"
+        android:textSize="10sp"
+        android:alpha="0.6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="100dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

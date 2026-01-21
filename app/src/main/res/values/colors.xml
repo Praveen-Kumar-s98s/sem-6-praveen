@@ -1,6 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+    <!-- OLED Stealth Color Palette -->
+    
+    <!-- Base Colors -->
+    <color name="colorPrimary">#0A0A0A</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#00F5FF</color>
+    
+    <!-- Background -->
+    <color name="oled_black">#000000</color>
+    <color name="deep_black">#0A0A0A</color>
+    <color name="card_dark">#121212</color>
+    
+    <!-- Accent Colors -->
+    <color name="cyber_cyan">#00F5FF</color>
+    <color name="cyber_cyan_glow">#3300F5FF</color>
+    <color name="alert_amber">#FF6B00</color>
+    <color name="alert_amber_glow">#33FF6B00</color>
+    <color name="danger_red">#FF1744</color>
+    <color name="danger_red_glow">#33FF1744</color>
+    <color name="success_green">#00E676</color>
+    
+    <!-- Text Colors -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#B0B0B0</color>
+    <color name="text_muted">#666666</color>
+    
+    <!-- Ring States -->
+    <color name="ring_off">#333333</color>
+    <color name="ring_on">#00F5FF</color>
+    <color name="ring_alert">#FF6B00</color>
 </resources>
